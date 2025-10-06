@@ -1,0 +1,144 @@
+{
+  "info": {
+    "name": "OpenWeatherMap API Health Check",
+    "description": "Collection to test OpenWeatherMap API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Current Weather API",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/data/2.5/weather?q=London&appid={{API_KEY}}&units=metric",
+          "protocol": "https",
+          "host": ["api", "openweathermap", "org"],
+          "path": ["data", "2.5", "weather"],
+          "query": [
+            {
+              "key": "q",
+              "value": "London",
+              "description": "City name"
+            },
+            {
+              "key": "appid",
+              "value": "{{API_KEY}}",
+              "description": "Your API key"
+            },
+            {
+              "key": "units",
+              "value": "metric",
+              "description": "Temperature units"
+            }
+          ]
+        },
+        "description": "Test current weather endpoint"
+      },
+      "response": []
+    },
+    {
+      "name": "2. Forecast API",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/data/2.5/forecast?q=London&appid={{API_KEY}}&units=metric",
+          "protocol": "https",
+          "host": ["api", "openweathermap", "org"],
+          "path": ["data", "2.5", "forecast"],
+          "query": [
+            {
+              "key": "q",
+              "value": "London",
+              "description": "City name"
+            },
+            {
+              "key": "appid",
+              "value": "{{API_KEY}}",
+              "description": "Your API key"
+            },
+            {
+              "key": "units",
+              "value": "metric",
+              "description": "Temperature units"
+            }
+          ]
+        },
+        "description": "Test 5-day forecast endpoint"
+      },
+      "response": []
+    },
+    {
+      "name": "3. Geocoding API (City Search)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={{API_KEY}}",
+          "protocol": "https",
+          "host": ["api", "openweathermap", "org"],
+          "path": ["geo", "1.0", "direct"],
+          "query": [
+            {
+              "key": "q",
+              "value": "London",
+              "description": "City name to search"
+            },
+            {
+              "key": "limit",
+              "value": "5",
+              "description": "Number of results"
+            },
+            {
+              "key": "appid",
+              "value": "{{API_KEY}}",
+              "description": "Your API key"
+            }
+          ]
+        },
+        "description": "Test geocoding/city search endpoint"
+      },
+      "response": []
+    },
+    {
+      "name": "4. Test with New York",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/data/2.5/weather?q=New York&appid={{API_KEY}}&units=metric",
+          "protocol": "https",
+          "host": ["api", "openweathermap", "org"],
+          "path": ["data", "2.5", "weather"],
+          "query": [
+            {
+              "key": "q",
+              "value": "New York",
+              "description": "City name"
+            },
+            {
+              "key": "appid",
+              "value": "{{API_KEY}}",
+              "description": "Your API key"
+            },
+            {
+              "key": "units",
+              "value": "metric",
+              "description": "Temperature units"
+            }
+          ]
+        },
+        "description": "Test with New York (default city in app)"
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "API_KEY",
+      "value": "YOUR_API_KEY_HERE",
+      "type": "string"
+    }
+  ]
+}
