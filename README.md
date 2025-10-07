@@ -2,8 +2,6 @@
 
 A modern, beautiful weather application built with React, TypeScript, and Tailwind CSS. Features real-time weather data, interactive charts, and a fully responsive design.
 
-🔗 **Repository:** [https://github.com/hassanalzahrani-1/Taqsy](https://github.com/hassanalzahrani-1/Taqsy)
-
 ## ✨ Features
 
 ### Weather Information
